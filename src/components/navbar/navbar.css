@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+}
+
+.NavBar-container {
+  position: relative;
+}
+
+.NavBar {
+  margin-right: 15%;
+  margin-left: 15%;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+.NavBar-links {
+  display: flex;
+  align-items: center;
+}
+
+.NavBar-links > * {
+  padding: 12px;
+
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.NavBar-link-adminDash,
+.NavBar-link-home {
+  color: #0056ac;
+}
+
+.NavBar-link-adminDash:hover,
+.NavBar-link-home:hover {
+  color: #0056ac;
+  border-bottom: #1a7cdd solid 1px;
+}
+
+.NavBar-link-login button {
+  background-color: #3896f5;
+  border-radius: 10px;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 12px;
+  width: 60px;
+  height: 40px;
+  border: none;
+
+  cursor: pointer;
+}
+.NavBar-link-login button:hover {
+  background-color: white;
+  border: #1a7cdd 2px solid;
+  color: #1a7cdd;
+
+  cursor: pointer;
+}
+.NavBar-link-login button {
+  transition-duration: 0.5s;
+}
+
+.NavBar-logo {
+  flex: 1;
+}
+.NavBar-logo img {
+  height: 100px;
+  width: 100px;
+}
+
+.NavBar-link-BasketIcon {
+  color: #0056ac;
+}
+
+.sandwish-menu-link-menuIcon {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #0056ac;
+}
+
+.sandwish-menu-link-menuIcon:hover {
+  cursor: pointer;
+}
+
+.sandwisch-menu-links {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  margin-right: 15%;
+  transition: display 20s;
+}
+.sandwisch-menu-links > * {
+  font-size: 15px;
+  padding-top: 20px 0;
+  text-align: center;
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+.sandwisch-menu-links > *:hover {
+  color: whitesmoke;
+  background-color: #1a7cdd;
+}
+
+.sandwisch-menu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .sandwisch-menu {
+    display: inherit;
+  }
+  .NavBar-links {
+    display: none;
+  }
+}
