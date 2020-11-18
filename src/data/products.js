@@ -7,26 +7,29 @@ import img6 from '../assets/img6.jpg';
 import img7 from '../assets/img7.jpg';
 import img8 from '../assets/img8.jpg';
 import img9 from '../assets/img9.jpg';
-import img10 from '../assets/img10.jpg';
+/*import img10 from '../assets/img10.jpg';
 import img11 from '../assets/img11.jpg';
 import img12 from '../assets/img12.jpg';
 import img13 from '../assets/img13.jpg';
 import img14 from '../assets/img14.jpg';
 import img15 from '../assets/img15.jpg';
 import img16 from '../assets/img16.jpg';
+*/
 
 
 
-const products = [
+export const products = [
     {
+      id: 0,
       name :'sofa',
-      details : "comfy sofa",
+      details : "expensive",
       price: '50$',
       image:img1,
       
     },
 
     {
+        id: 1,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -34,6 +37,7 @@ const products = [
         
       },
       {
+        id: 2,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -41,6 +45,7 @@ const products = [
         
       },
       {
+        id: 3,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -48,6 +53,7 @@ const products = [
         
       },
       {
+        id: 4,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -55,6 +61,7 @@ const products = [
         
       },
       {
+        id: 5,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -62,6 +69,7 @@ const products = [
         
       },
       {
+        id: 6,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -69,6 +77,7 @@ const products = [
         
       },
       {
+        id: 7,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -76,13 +85,18 @@ const products = [
         
       },
       {
+        id: 8,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img9,
         
       },
-      {
+    ];
+
+    // Put in a comment the rest of the other products for now we don't need them.
+      /*{
+        id: 9,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -90,6 +104,7 @@ const products = [
         
       },
       {
+        id: 10,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -97,6 +112,7 @@ const products = [
         
       },
       {
+        id: 11,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -104,6 +120,7 @@ const products = [
         
       },
       {
+        id: 12,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -111,6 +128,7 @@ const products = [
         
       },
       {
+        id: 13,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -118,6 +136,7 @@ const products = [
         
       },
       {
+        id: 14,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
@@ -125,19 +144,17 @@ const products = [
         
       },
       {
+        id: 15,
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img16,
         
-      },
-  
-                              
+      },*/
 
 
-];
+// I didn't use this function I exported the product array directly
 
-
-export default function getProducts() {
+/*export default function getProducts() {
     return products;
-  }
+  }*/
