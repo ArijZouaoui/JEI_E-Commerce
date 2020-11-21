@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import AddShoppingCartOutlinedIcon from "@material-ui/icons/AddShoppingCartOutlined";
 import MenuIcon from "@material-ui/icons/Menu";
-import "./NavBar.css";
+import "./navbar.css";
 function NavBar({ admin = true }) {
   let [counter, setcounter] = useState(0);
   return (
