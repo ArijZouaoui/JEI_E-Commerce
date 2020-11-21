@@ -18,7 +18,7 @@ import img16 from '../assets/img16.jpg';
 
 
 const products = [
-    {
+    { id :'1',
       name :'sofa',
       details : "comfy sofa",
       price: '50$',
@@ -26,105 +26,105 @@ const products = [
       
     },
 
-    {
+    {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img2,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img3,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img4,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img5,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img6,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img7,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img8,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img9,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img10,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img11,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img12,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img13,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img14,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
         image:img15,
         
       },
-      {
+      {   id :'1',
         name :'sofa',
         details : "comfy sofa",
         price: '50$',
