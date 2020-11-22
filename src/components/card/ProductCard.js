@@ -38,7 +38,7 @@ const ProductCard = ({name, price, image, id, availability,description}) => {
   <Card onClick={handleHover} className='card text-center' style={{marginTop: 10, marginBottom: 10, display:'inline-grid'}} > 
   <Card.Img variant="top" src={image} style={{margin:'auto', height:'250px', weight:'150px'}} />
   <Card.Body>
-    <Card.Title className='productinfo' style={appStyles} onMouseEnter={() => setTextColor("#328fa8")} onMouseLeave={()=> setTextColor("#777")}>
+    <Card.Title className='productinfo' style={appStyles} onMouseEnter={() => setTextColor("#003fcc")} onMouseLeave={()=> setTextColor("#777")}>
       {name}
     </Card.Title>
     <Card.Text>
