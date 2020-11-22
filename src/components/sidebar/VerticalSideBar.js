@@ -1,10 +1,12 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import './sidebar.css'
-const VerticalSideBar = () => {
+import './VerticalSideBar.css'
+
+
+const VerticalSideBar = () => {  
 return(
-    <Card style={{ width: '13rem', display:'inline-grid'}} className='card text-center'>
-<div className="ui vertical menu" >
+<Card style={{marginTop: 20, marginBottom: 20, width: '13rem', display:'inline-grid'}} className='card text-center'>
+<div className="ui vertical text-center" >
   <div className="item">
     <div className="header">SOFAS</div>
     <div className="menu">
@@ -31,6 +33,8 @@ return(
   </div>
 </div>
 </Card>
+
+
 
 )
 }

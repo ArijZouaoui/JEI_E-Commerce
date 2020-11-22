@@ -23,6 +23,8 @@ export const products = [
       id: 0,
       name :'sofa',
       details : "expensive",
+      availability:'In Stock',
+      description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       price: '50$',
       image:img1,
       
@@ -32,6 +34,8 @@ export const products = [
         id: 1,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit ,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img2,
         
@@ -40,6 +44,8 @@ export const products = [
         id: 2,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img3,
         
@@ -48,6 +54,8 @@ export const products = [
         id: 3,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img4,
         
@@ -56,6 +64,8 @@ export const products = [
         id: 4,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img5,
         
@@ -64,6 +74,8 @@ export const products = [
         id: 5,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img6,
         
@@ -72,6 +84,8 @@ export const products = [
         id: 6,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img7,
         
@@ -80,6 +94,8 @@ export const products = [
         id: 7,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img8,
         
@@ -88,6 +104,8 @@ export const products = [
         id: 8,
         name :'sofa',
         details : "comfy sofa",
+        availability:'In Stock',
+        description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         price: '50$',
         image:img9,
         

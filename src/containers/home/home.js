@@ -7,7 +7,7 @@ import {Container , Row, Col} from 'react-bootstrap'
 
 const Home = () => {
     return(
-        <div>
+        <div className="row">
         <Container>
         <Row>
         <Col xs={2} md={4}>
