@@ -1,13 +1,15 @@
 import React from 'react';
 import './home.css';
+import NavBar from "../../components/navbar/navbar";
+
 
 const Home = () => {
+
+
+
     return(
         <>
-            <h4>
-                Home page
-            </h4>
-
+            <NavBar />
 
         </>
     );
