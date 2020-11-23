@@ -1,7 +1,7 @@
 import React from 'react';
-import Dropdown from '../../components/sidebar/Dropdown';
-import VerticalSideBar from '../../components/sidebar/VerticalSideBar'
-import ProductList from '../../components/card/ProductList'
+import Dropdown from '../../components/sidebar/dropdown';
+import VerticalSideBar from '../../components/sidebar/vertical_side_bar'
+import ProductList from '../../components/card/product_list'
 import {products} from '../../data/products'
 import {Container , Row, Col} from 'react-bootstrap'
 

@@ -1,11 +1,11 @@
 import {BrowserRouter,Switch,Route} from 'react-router-dom';
-import Home from './containers/home/home';
+import home from './containers/home/home';
 
 const App =()=> {
   return (
    <BrowserRouter>
         <Switch>
-          <Route path='/' component={Home} />
+          <Route path='/' component={home} />
         </Switch>
    </BrowserRouter>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import './VerticalSideBar.css'
+import './vertical_side_bar.css'
 
 
 const VerticalSideBar = () => {  

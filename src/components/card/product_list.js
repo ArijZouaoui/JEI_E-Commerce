@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from './ProductCard'
+import ProductCard from './product_card'
 
 
 // This function represents the list of the products with its image, name and price.
@@ -10,7 +10,7 @@ const ProductList = ({ products })=> {
  
     
     return(
-        <div className="row" /*style={{ gridColumnGap:'50px',display:'flex', flexWrap:'wrap'}}*/>
+        <div className="row">
         {productComponent} 
         </div>
     );

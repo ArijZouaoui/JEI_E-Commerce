@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { FaShoppingBasket } from 'react-icons/fa'
 import ReactCardFlip from 'react-card-flip'
-import './ProductCard.css'
+import './product_card.css'
 
 const ProductCard = ({name, price, image, id, availability,description}) => {
   const [textColor, setTextColor] = useState("#777")
