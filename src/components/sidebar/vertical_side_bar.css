@@ -1,0 +1,18 @@
+.header {
+    font-family: Montserrat, 'Open Sans';
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    display: inline-grid;
+}
+
+.item {
+    color: #777;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+.menu a {
+    display: block;
+    margin-bottom: 10px;
+}
