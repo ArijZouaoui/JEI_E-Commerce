@@ -1,7 +1,7 @@
 import img1 from '../assets/img1.jpg';
 import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
-import img4 from '../assets/img4.jpg';
+import img4 from '../assets/img4.jpg';/*
 import img5 from '../assets/img5.jpg';
 import img6 from '../assets/img6.jpg';
 import img7 from '../assets/img7.jpg';
@@ -13,40 +13,44 @@ import img12 from '../assets/img12.jpg';
 import img13 from '../assets/img13.jpg';
 import img14 from '../assets/img14.jpg';
 import img15 from '../assets/img15.jpg';
-import img16 from '../assets/img16.jpg';
+import img16 from '../assets/img16.jpg';*/
 
 
 
-const products = [
-    {
+export const products = [
+    { id : 1,
       name :'sofa',
       details : "comfy sofa",
-      price: '50$',
+      price: 50,
       image:img1,
+      quantity:2,
       
     },
 
-    {
+    {   id : 2,
         name :'sofa',
         details : "comfy sofa",
-        price: '50$',
+        price: 50,
         image:img2,
+      quantity:2,
         
       },
-      {
+      { id : 3,
         name :'sofa',
         details : "comfy sofa",
-        price: '50$',
+        price: 50,
         image:img3,
+        quantity:2,
         
       },
-      {
+      { id : 4,
         name :'sofa',
         details : "comfy sofa",
-        price: '50$',
+        price: 50,
         image:img4,
+        quantity:2,
         
-      },
+      },/*
       {
         name :'sofa',
         details : "comfy sofa",
@@ -130,14 +134,10 @@ const products = [
         price: '50$',
         image:img16,
         
-      },
+      },*/
   
                               
 
 
 ];
 
-
-export default function getProducts() {
-    return products;
-  }
