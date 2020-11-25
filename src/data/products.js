@@ -24,7 +24,7 @@ export const products = [
       details : "expensive",
       availability:'In Stock',
       description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      price: '50$',
+      price: 50,
       image:img1,
       quantity:2,
       
@@ -36,7 +36,7 @@ export const products = [
         details : "comfy sofa",
         availability:'In Stock',
         description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit ,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        price: '50$',
+        price: 50,
         image:img2,
       quantity:2,
         
@@ -47,7 +47,7 @@ export const products = [
         details : "comfy sofa",
         availability:'In Stock',
         description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        price: '50$',
+        price: 50,
         image:img3,
         quantity:2,
         
@@ -58,7 +58,7 @@ export const products = [
         details : "comfy sofa",
         availability:'In Stock',
         description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        price: '50$',
+        price: 50,
         image:img4,
         quantity:2,
         

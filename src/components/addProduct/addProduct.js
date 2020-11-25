@@ -56,9 +56,9 @@ class AddProduct extends Component {
                      
                          <Form onSubmit={this.handleSubmit}
                          onChange={this.onChangeHandler}
-                         ><Form.Label>Product name</Form.Label>
+                         >
                              <Form.Group controlId="name">
-                                 
+                             <Form.Label>Product name</Form.Label>
                                  <Form.Control
                                  type='text'
                                  name='name'
