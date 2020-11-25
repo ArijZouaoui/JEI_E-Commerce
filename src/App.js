@@ -9,8 +9,9 @@ const App =()=> {
   return (
    <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={Cart} />
+          <Route exact path='/' component={Home} />
           <Route path='/dashboard' component={Dashboard} />
+          <Route path='/panier' component={Cart} />
         </Switch>
    </BrowserRouter>
   );
