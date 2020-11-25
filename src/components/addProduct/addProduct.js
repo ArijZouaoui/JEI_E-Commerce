@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Form, Modal, Button, Row, Col, } from 'react-bootstrap';
 import img from '../../assets/defaultpic.png';
-
+import './addProduct.css'
 
 class AddProduct extends Component {
     state = {
@@ -53,12 +53,12 @@ class AddProduct extends Component {
             <Modal.Body>
              
                  <Row>
-                     <Col sm={6}>
+                     
                          <Form onSubmit={this.handleSubmit}
                          onChange={this.onChangeHandler}
-                         >
+                         ><Form.Label>Product name</Form.Label>
                              <Form.Group controlId="name">
-                                 <Form.Label>Product name</Form.Label>
+                                 
                                  <Form.Control
                                  type='text'
                                  name='name'
@@ -112,14 +112,7 @@ class AddProduct extends Component {
                          </Form.Group>
                         
                          </Form>
-                     </Col>
-                     <Col>
-
                    
-                   
-  
-                     
-                     </Col>
                  </Row>
             </Modal.Body>
             <Modal.Footer>

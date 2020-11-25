@@ -7,7 +7,7 @@ import VerticalSideBar from '../../components/sidebar/vertical_side_bar'
 import ProductList from '../../components/card/product_list'
 import {products} from '../../data/products'
 import {Container , Row, Col} from 'react-bootstrap'
-
+import Footer from "../../components/footer/footer"
 const Home = () => {
 
 
@@ -30,6 +30,7 @@ const Home = () => {
         </Col>
         </Row>
         </Container>
+        <Footer></Footer>
         </div>
         </>
     );
