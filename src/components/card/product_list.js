@@ -3,18 +3,20 @@ import ProductCard from './product_card'
 
 
 // This function represents the list of the products with its image, name and price.
-const ProductList = ({ products })=> {
-    const productComponent =products.map((user, i) => {
-        return <ProductCard key={i} id={products[i].id} name={products[i].name} image={products[i].image} price={products[i].price} availability={products[i].availability} description={products[i].description} />
+const ProductList = ({ products, categoryProduct, name }) => {
+
+
+    const productComponent = products.filter(product => (categoryProduct.category === '' && categoryProduct.name === '') || (product.category === categoryProduct.category && product.name === categoryProduct.name) || (categoryProduct.category === '' && categoryProduct.name === product.name)).map((product) => {
+        return <ProductCard key={product.id} id={product.id} name={product.name} category={product.category} image={product.image} price={product.price} availability={product.availability} description={product.description} />
     })
- 
-    
-    return(
+
+
+    return (
         <div className="row">
-        {productComponent} 
+            {productComponent}
         </div>
     );
 }
 
-export default ProductList ;
+export default ProductList;
 
