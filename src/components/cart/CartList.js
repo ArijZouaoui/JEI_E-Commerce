@@ -4,13 +4,6 @@ import  './CartList.css';
 function CartList({ cart, setCart }) {
 
 
-    const updateCartHandler = (id, value) => {
-       let updatedCart = cart.map(product => product.id === id ? product.quantity += value : product)
-
-        setCart(updatedCart)
-
-    }
-
     const removeFromCart = (productToRemove) => {
         setCart(
             cart.filter((product) => product !== productToRemove)
@@ -43,11 +36,11 @@ function CartList({ cart, setCart }) {
                                 </div>
                                 <div className="col-4 col-sm-4 col-md-4">
                                     <div className="quantity">
-                                        <input type="button" value="+" className="plus"  onClick={() =>updateCartHandler(product.id, +1)}/>
+
                                         <input   value={product.quantity}
                                                className="qty"
                                                size="4" readOnly={product.quantity}/>
-                                        <input type="button" value="-" className="minus" onClick={() =>updateCartHandler(product.id, -1)}/>
+
                                     </div>
                                 </div>
                                 <div className="col-2 col-sm-2 col-md-2 text-right">

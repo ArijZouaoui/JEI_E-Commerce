@@ -7,9 +7,8 @@ import {products} from "../../data/products";
 
 
 
-const Cart =() =>{
+function Cart ({cart ,setCart}) {
 
-    const [cart, setCart] = useState(products);
 
     const getTotalSum = () => {
 

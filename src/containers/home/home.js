@@ -1,16 +1,15 @@
-import React from 'react';
 import './home.css';
 import NavBar from "../../components/navbar/navbar";
 import Slider from "../../components/slider/Slider";
 import React ,{ useState } from 'react';
-import Dropdown from '../../components/sidebar/dropdown';
+import Dropdown from '../../components/sidebar/Dropdown';
 import VerticalSideBar from '../../components/sidebar/vertical_side_bar'
-import ProductList from '../../components/card/product_list'
 import {products} from '../../data/products'
 import {Container , Row, Col} from 'react-bootstrap'
 import Footer from "../../components/footer/footer"
-const Home = () => {
-  
+import ProductList from "../../components/card/product_card";
+function Home  ({cart ,addToCart}){
+
 
     const [categoryProduct ,setCategoryProduct] = useState({
         category : '',
@@ -26,7 +25,6 @@ const Home = () => {
     return(
         <>
             <NavBar />
-
             <Slider />
         <div className="row">
         <Container>
@@ -37,7 +35,7 @@ const Home = () => {
         <Dropdown />
         </Col>
         <Col xs={4} md={8}>
-        <ProductList products={products} categoryProduct={categoryProduct} handleChange={handleChange} />
+        <ProductList categoryProduct={categoryProduct} cart={cart} addToCart= {addToCart} handleChange={handleChange}/>
         </Col>
         </Row>
         </Container>
