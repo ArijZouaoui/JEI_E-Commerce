@@ -4,6 +4,7 @@
 
 .NavBar-container {
   position: relative;
+  width: 100%;
 }
 
 .NavBar {
@@ -76,7 +77,7 @@
 .sandwish-menu-link-menuIcon {
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 5%;
   color: #0056ac;
 }
 
@@ -87,9 +88,9 @@
 .sandwisch-menu-links {
   display: flex;
   flex-direction: column;
-  margin-left: 15%;
-  margin-right: 15%;
-  transition: display 20s;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 .sandwisch-menu-links > * {
   font-size: 15px;
@@ -97,10 +98,12 @@
   text-align: center;
   width: 100%;
 
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.sandwisch-menu-links > *:hover {
+.sandwisch-menu-links > *:hover,
+.sandwisch-menu-link-BasketIcon :hover {
   color: whitesmoke;
   background-color: #1a7cdd;
 }
