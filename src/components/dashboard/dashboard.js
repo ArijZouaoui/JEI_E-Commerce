@@ -3,12 +3,24 @@ import getCommands from '../../data/commands';
 import './dashboard.css';
 import addIcon from '../../assets/add.png';
 import AddProduct from '../addProduct/addProduct';
+import axios from 'axios';
+import { List } from '@material-ui/core';
 
 class Dashboard extends Component {
     state = {
-        showAddPopup : false
+        showAddPopup : false,
+        commandes: []
     }
-
+    componentDidMount(){
+      axios.get('http://localhost:5000/api/commandes/get')
+      .then(response=>{
+      this.setState({commandes: response.data});
+      console.log(response)
+      })
+      .catch(function(error){console.log(error)});
+        
+         
+    }
 
     handle =()=>{
         this.setState({showAddPopup:true})  
@@ -19,7 +31,7 @@ class Dashboard extends Component {
       }
 
     render() {
-        const commands = getCommands()
+        const commandes = this.state.commandes
 
         let i =0
         return (
@@ -46,16 +58,16 @@ class Dashboard extends Component {
         <tbody>
           
          {
-          commands.map(function(current){
+          commandes.map(function(current){
                         i++
                         return(
                             <tr>
                             <th scope="row">{i}</th>
                             <td>{current.id}</td>
-                            <td>{current.product_name}</td>
-                            <td>{current.phone_number}</td>
-                            <td>{current.quantity}</td>
-                            <td>{current.date}</td>
+                            <td>{current.id}</td>
+                            <td>{current.id}</td>
+                            <td>{current.id}</td>
+                            <td>{current.id}</td>
                             </tr>
                         )})
                     } 

@@ -5,8 +5,22 @@ import './addProduct.css'
 
 class AddProduct extends Component {
     state = {
+    }
+
+    constructor(props) {
+      super(props)
+      this.state = { 
         imagePreviewUrl:'',
-        file:''
+        file:'',
+        error:String,
+        productName:'',
+        errorList: [], 
+        showErrors: Boolean,
+        disabledButton: true}
+      this.handleName = this.handleName.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this._handleImageChange = this._handleImageChange.bind(this);
+     
     }
 
     _handleImageChange(e) {
@@ -25,17 +39,71 @@ class AddProduct extends Component {
         reader.readAsDataURL(file)
       }
     
+      productNameValidator(name) {
+        var nameError = '';
+        if (!name || name.length === 0) {
+            nameError = 'Name is required';
+        }
+        return nameError;
+    };
+      productPriceValidator(price) {
+        var priceError = '';
+        if (!price || price <= 0) {
+            priceError = 'Price is required';
+        }
+        return priceError;
+    };
+      productDscValidator(dsc) {
+        var dscError = '';
+        if (!dsc || dsc.length === 0) {
+            dscError = 'Description is required';
+        }
+        return dscError;
+    };
+      productCategoryValidator(category) {
+        var categoryError = '';
+        if (!category || category.length === 0) {
+            categoryError = 'Category is required';
+        }
+        return categoryError;
+    };
+    handleName (event) {
+      var name = "" + event.target.value;
+      var error = this.state.error;
 
+      error.nameMessage = this.productNameValidator(name);
 
-
+      this.setState({
+          error: error,
+          productName: name
+      });
+  };
+    handleSubmit(){
+     var nameError = this.state.error.nameMessage;
+    console.log(nameError)
+    var errors = this.state.errorList;
+    if (errors){
+      this.setState({showErrors : true});
+    }
+            
+    }
     render() {
-        let {imagePreviewUrl} = this.state;
+        let {imagePreviewUrl, error,disabledButton, errorList} = this.state;
+        console.log(error.open)
         let $imagePreview = null;
+        var errorText = null;
         if (imagePreviewUrl) {
           $imagePreview = (<img src={imagePreviewUrl} />);
         }
-        this._handleImageChange = this._handleImageChange.bind(this);
-     
+        if (error) {
+          errorText = error.nameMessage ;//+ " " + error.passwordMessage + " " + error.emailMessage;
+      } 
+      if (!errorText)
+      {
+          disabledButton = false;
+          errorText = error.message;
+      }
+       
         return (
             <div className="container">
             
@@ -46,6 +114,7 @@ class AddProduct extends Component {
             centered
           >
             <Modal.Header closeButton>
+
               <Modal.Title id="contained-modal-title-vcenter">
                 Add a new product
               </Modal.Title>
@@ -53,7 +122,7 @@ class AddProduct extends Component {
             <Modal.Body>
              
                  <Row>
-                     
+                     <p>{error.nameMessage}</p>
                          <Form onSubmit={this.handleSubmit}
                          onChange={this.onChangeHandler}
                          >
@@ -62,7 +131,7 @@ class AddProduct extends Component {
                                  <Form.Control
                                  type='text'
                                  name='name'
-                                 required
+                                 onChange={this.handleName}
                                  />
                              </Form.Group>
                              <Form.Group controlId="price">
@@ -70,7 +139,7 @@ class AddProduct extends Component {
                                  <Form.Control
                                  type='number'
                                  name='price'
-                                 required
+                                 
                                  placeholder=''
                                  
                                  />
@@ -79,7 +148,7 @@ class AddProduct extends Component {
                                  <Form.Control
                                  type='text'
                                  name='description'
-                                 required
+                                 
                                  placeholder=''
                                  
                                  />
@@ -89,7 +158,7 @@ class AddProduct extends Component {
                                  <Form.Control
                                  type='text'
                                  name='category'
-                                 required
+                                 
                                  placeholder=''
                                  
                                  />
@@ -106,7 +175,9 @@ class AddProduct extends Component {
                          </Form.Group>
                          <Form.Group>
                              <Button vaiant='primary'
-                             type='submit'>
+                             type='submit'
+                             disabled ={this.disabledButton}
+                             onClick={this.handleSubmit}>
                                  Add 
                              </Button>
                          </Form.Group>
