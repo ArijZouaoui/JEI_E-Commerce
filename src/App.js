@@ -1,20 +1,32 @@
-import {BrowserRouter,Switch,Route} from 'react-router-dom';
-import Home from './containers/home/home';
-import Dashboard from './components/dashboard/dashboard';
-import Cart from "./containers/home/Cart";
-import home from './containers/home/home';
-import React from 'react';
+import Routes from "./Routes";
+import React from "react";
+import { useEffect, useState } from "react";
+import { setAccessToken, setLogedIn } from "./utils/tokenHandler";
+import { getUser, setUser } from "./utils/User";
+import axios from "axios";
 
-const App =()=> {
-  return (
-   <BrowserRouter>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route path='/dashboard' component={Dashboard} />
-          <Route path='/panier' component={Cart} />
-        </Switch>
-   </BrowserRouter>
-  );
-}
+const App = () => {
+  let [loading, setLoading] = useState(true);
+  useEffect(() => {
+    axios
+      .post(
+        "http://localhost:5000/auth/users/refreshToken",
+        {},
+        { withCredentials: true }
+      )
+      .then((response) => {
+        const { accessToken, userName, admin, userId } = response.data;
+        setAccessToken(accessToken);
+        setLogedIn(true);
+        setUser({ userName, userId, admin });
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  }, []);
+  return <>{loading ? <div>loading...</div> : <Routes />}</>;
+};
 
 export default App;
