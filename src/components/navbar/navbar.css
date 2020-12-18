@@ -8,8 +8,8 @@
 }
 
 .NavBar {
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 10%;
+  margin-left: 7.5%;
   display: flex;
 
   justify-content: space-around;
@@ -36,7 +36,6 @@
 .NavBar-link-adminDash:hover,
 .NavBar-link-home:hover {
   color: black;
-  border-bottom: black solid 1px;
 }
 
 .NavBar-link-login button {
@@ -67,14 +66,12 @@
   box-sizing: border-box;
   height: 100%;
   flex: 1;
-  border: black 2px dotted;
 }
 .NavBar-logo-img {
   margin-left: 0px;
-
   width: 180px;
-  height: 80%;
-  margin-top: 9px;
+  height: 65px;
+  margin-top: 17px;
   object-fit: fill;
 }
 
