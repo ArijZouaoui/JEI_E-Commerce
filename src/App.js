@@ -1,4 +1,4 @@
-import Routes from "./Routes";
+import Routes from "./routes";
 import React from "react";
 import { useEffect, useState } from "react";
 import { setAccessToken, setLogedIn } from "./utils/tokenHandler";
