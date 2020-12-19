@@ -24,12 +24,12 @@ const Home = () => {
       <div className="row">
         <Container>
           <Row>
-            <Col xs={2} md={4}>
+            <Col xs={6} md={4}>
               <VerticalSideBar handleChange={handleChange} />
               <br />
               <Dropdown />
             </Col>
-            <Col xs={4} md={8}>
+            <Col xs={6} md={8}>
               <ProductList
                 products={products}
                 categoryProduct={categoryProduct}
