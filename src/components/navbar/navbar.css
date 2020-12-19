@@ -8,8 +8,8 @@
 }
 
 .NavBar {
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 10%;
+  margin-left: 7.5%;
   display: flex;
 
   justify-content: space-around;
@@ -30,17 +30,16 @@
 
 .NavBar-link-adminDash,
 .NavBar-link-home {
-  color: #0056ac;
+  color: #cc0000;
 }
 
 .NavBar-link-adminDash:hover,
 .NavBar-link-home:hover {
-  color: #0056ac;
-  border-bottom: #1a7cdd solid 1px;
+  color: black;
 }
 
 .NavBar-link-login button {
-  background-color: #3896f5;
+  background-color: #cc0000;
   border-radius: 10px;
   color: #eeeeee;
   text-align: center;
@@ -53,8 +52,8 @@
 }
 .NavBar-link-login button:hover {
   background-color: white;
-  border: #1a7cdd 2px solid;
-  color: #1a7cdd;
+  border: 2px solid;
+  color: black;
 
   cursor: pointer;
 }
@@ -63,22 +62,37 @@
 }
 
 .NavBar-logo {
+  max-height: inherit;
+  box-sizing: border-box;
+  height: 100%;
   flex: 1;
 }
-.NavBar-logo img {
-  height: 100px;
-  width: 100px;
+.NavBar-logo-img {
+  margin-left: 0px;
+  width: 180px;
+  height: 65px;
+  margin-top: 17px;
+  object-fit: fill;
 }
 
 .NavBar-link-BasketIcon {
-  color: #0056ac;
+  color: #cc0000;
+}
+
+.NavBar-link-BasketIcon-notLogedIn {
+  color: #cc0000;
+}
+
+.NavBar-link-BasketIcon-notLogedIn:hover {
+  cursor: pointer;
+  color: black;
 }
 
 .sandwish-menu-link-menuIcon {
   position: absolute;
   top: 30px;
   right: 5%;
-  color: #0056ac;
+  color: #cc0000;
 }
 
 .sandwish-menu-link-menuIcon:hover {
@@ -93,6 +107,7 @@
   align-items: center;
 }
 .sandwisch-menu-links > * {
+  color: #cc0000;
   font-size: 15px;
   padding-top: 20px 0;
   text-align: center;
@@ -105,9 +120,20 @@
 .sandwisch-menu-links > *:hover,
 .sandwisch-menu-link-BasketIcon :hover {
   color: whitesmoke;
-  background-color: #1a7cdd;
+  background-color: #cc0000;
+}
+.sandwisch-menu-link-login-true:hover {
+  text-decoration-color: whitesmoke;
+  cursor: default;
+  background-color: #cc0000;
 }
 
+.sandwisch-menu-link-login-true {
+  color: #cc0000;
+  text-decoration: none;
+  background-color: white;
+  border: none;
+}
 .sandwisch-menu {
   display: none;
 }
