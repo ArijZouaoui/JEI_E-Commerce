@@ -64,10 +64,10 @@ class Dashboard extends Component {
                             <tr>
                             <th scope="row">{i}</th>
                             <td>{current.id}</td>
-                            <td>{current.id}</td>
-                            <td>{current.id}</td>
-                            <td>{current.id}</td>
-                            <td>{current.id}</td>
+                            <td>{current.orderDate}</td>
+                            <td>{current.deliveryDate}</td>
+                            <td>{current.cartId}</td>
+                            <td>{current.createdAt}</td>
                             </tr>
                         )})
                     } 

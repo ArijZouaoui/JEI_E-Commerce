@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './home.css';
 import NavBar from "../../components/navbar/navbar";
 import Slider from "../../components/slider/Slider";
-import Dropdown from '../../components/sidebar/dropdown';
+import Dropdown from '../../components/sidebar/Dropdown';
 import VerticalSideBar from '../../components/sidebar/vertical_side_bar'
 import ProductList from '../../components/card/product_list'
 import {products} from '../../data/products'
