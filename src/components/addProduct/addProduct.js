@@ -3,6 +3,7 @@ import {Form, Modal, Button, Row, Col, } from 'react-bootstrap';
 import img from '../../assets/defaultpic.png';
 import './addProduct.css'
 import axios from 'axios';
+//Ajout des produits : Arij Zouaoui
 
 class AddProduct extends Component {
     state = {}

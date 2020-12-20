@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Card } from 'react-bootstrap'
 import './vertical_side_bar.css'
-
+//vertical side bar / categories filter : Sarah BenAbdallah
 
 const VerticalSideBar = (props) => {
   const [textColor, setTextColor] = useState({ sofa: "#777", tables: "#777", couche: "#777" })

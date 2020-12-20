@@ -2,7 +2,7 @@ import React from 'react';
 import  './CartList.css';
 
 function CartList({ products ,removeFromCart}) {
-
+//page panier : Yahya Cherif
 
 
 
