@@ -12,6 +12,8 @@ import { getLogedIn, setAccessToken } from "../../utils/tokenHandler";
 import { setLogedIn } from "../../utils/tokenHandler";
 import { logOut } from "../../utils/logOut";
 import { useHistory } from "react-router-dom";
+// userForm and error handling Ahmed Ayari
+//login/signup/navbar appearence : mohamed achich
 function NavBar() {
   const history = useHistory();
 
@@ -33,7 +35,7 @@ function NavBar() {
         password: password,
         phoneNumber: 23569885,
         address: "rue junior entreprise insat ",
-        admin: true,
+        admin: 0,
       })
       .then((response) => {})
       .catch((err) => {
@@ -107,6 +109,7 @@ function NavBar() {
               </div>
             </Link>
             {userL.admin && logedInL ? (
+              //only display the admin dashboard if the admin is loged else in the case of a non-admin user display hello + his name
               <Link style={{ textDecoration: "none" }} to="/dashboard">
                 <div className="NavBar-link-adminDash">
                   <span>Admin Dashboard</span>
@@ -121,28 +124,32 @@ function NavBar() {
             ) : (
               ""
             )}
-            {!logedInL ? (
-              <div className="NavBar-link-login">
-                <Link style={{ textDecoration: "none" }}>
-                  <button onClick={handleOpen}>login</button>
-                </Link>
-              </div>
-            ) : (
-              <div className="NavBar-link-login">
-                <Link style={{ textDecoration: "none" }}>
-                  <button
-                    onClick={() => {
-                      logOut();
-                      setLogedInL(false);
-                      setUser({});
-                      history.push("/");
-                    }}
-                  >
-                    log out
-                  </button>
-                </Link>
-              </div>
-            )}
+            {
+              //if the user is not loged in display the login button : else logout button
+              !logedInL ? (
+                <div className="NavBar-link-login">
+                  <Link style={{ textDecoration: "none" }}>
+                    <button onClick={handleOpen}>login</button>
+                  </Link>
+                </div>
+              ) : (
+                <div className="NavBar-link-login">
+                  <Link style={{ textDecoration: "none" }}>
+                    <button
+                      onClick={() => {
+                        logOut();
+                        setLogedInL(false);
+                        setUser({});
+                        //when the user loges out return to the home page
+                        history.push("/");
+                      }}
+                    >
+                      log out
+                    </button>
+                  </Link>
+                </div>
+              )
+            }
             {logedInL ? (
               <Link style={{ textDecoration: "none" }} to="/cart">
                 <div className="NavBar-link-BasketIcon">

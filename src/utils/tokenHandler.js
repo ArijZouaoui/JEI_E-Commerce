@@ -1,3 +1,4 @@
+//mohamed achich : to get /set : logedIn/accessToken : the token mecanism explanation is in the backend folder :tokenHandler
 let accessToken = "";
 let logedIn = false;
 
