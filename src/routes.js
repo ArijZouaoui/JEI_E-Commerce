@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./containers/home/home";
 import Dashboard from "./components/dashboard/dashboard";
-import Cart from "./components/cart/CartList";
+import Cart from "./containers/home/Cart";
 import NavBar from "./components/navbar/navbar";
 import { getUser } from "./utils/User";
 import { useHistory } from "react-router-dom";
