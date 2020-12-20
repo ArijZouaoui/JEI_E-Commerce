@@ -1,3 +1,10 @@
 label{
-    position: relative;
+    display: contents !important;
+}
+p{
+    color: red;
+}
+form{
+    margin-left: 10em;
+    display: grid;
 }
