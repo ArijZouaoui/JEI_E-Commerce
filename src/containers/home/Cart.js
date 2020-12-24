@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import CartList from "../../components/cart/CartList";
 import '../../components/cart/CartList.css'
 import axios from 'axios';
-
+import getUser from "../../utils/User";
 
 
 
@@ -17,30 +17,27 @@ class Cart extends Component {
         }
     }
     componentDidMount() {
-        axios.post(`http://localhost:5000/api/productUser/get`,{UserId:'id'})
+       // const user =getUser();
+        axios.get(`http://localhost:5000/api/productUser/get/`+2)
             .then(res => {
+                console.log(res.data)
                 const products = res.data;
                 this.setState({ products });
             })
     }
-    removeFromCart(id, e){
-        const postData ={
-            id :id,
-            UserId :'5',
+    removeFromCart = (id,e) =>{
 
-
-        };
-        axios.post(`http://localhost:5000/api/productUser/deleteOne`,postData)
+        axios.delete(`http://localhost:5000/api/productUser/deleteOne/2/`+id)
             .then(res => {
-                console.log(res);
+
                 console.log(res.data);
                 const products = res.data;
                 this.setState({products});
             })
 
     }
-    clearCart(){
-        axios.post(`http://localhost:5000/api/productUser/delete`,{UserId:'id'})
+    clearCart=(e)=>{
+        axios.delete(`http://localhost:5000/api/productUser/delete/`+2)
             .then(res => {
                 const products = res.data;
                 this.setState({ products });
@@ -57,13 +54,13 @@ class Cart extends Component {
                         <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                         Panier
                         <div className="pull-right">
-                            <button className="btn btn-outline-info btn-sm pull-right"  onClick={this.clearCart}>Vider le
+                            <button className="btn btn-outline-info btn-sm pull-right"  onClick={(e)=> this.clearCart()}>Vider le
                                 panier
                             </button>
                         </div>
                     </div>
                     <div className="card-body">
-                        <CartList product={products} removeFromCart={this.removeFromCart}/>
+                        <CartList products={products} removeFromCart={this.removeFromCart}/>
                     </div>
                     <div className="card-footer">
                         <div className="pull-right" style={{margin: '10px'}}>

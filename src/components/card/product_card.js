@@ -3,15 +3,32 @@ import { Card, Button } from 'react-bootstrap'
 import { FaShoppingBasket } from 'react-icons/fa'
 import ReactCardFlip from 'react-card-flip'
 import './product_card.css'
+import axios from "axios";
 
-const ProductCard = ({name, price, image, id, availability,description}) => {
+
+const ProductCard = ({name, price, image, id, availability,description, category}) => {
   
 
   const [isFlipped, setIsFlipped]= useState(false)
   const handleHover = () => {
     setIsFlipped(!isFlipped);
   }
+const addToCart = () =>{
+    const params ={"id": id,
+      "name": name,
+      "description": description,
+      "image": image,
+      "price": price,
+      "UserId": 2,
+      "category": category,
+  }
+  console.log({id});
+    axios.post('http://localhost:5000/api/productUser/post',params)
+    .then(res => {
+    console.log(res.data);
+  })
 
+}
  
     return (
       <div className="col-md-4">
@@ -39,7 +56,7 @@ const ProductCard = ({name, price, image, id, availability,description}) => {
     <h6 className='productinfo'>Availability: </h6><h6>{availability} </h6>
     <h6 className='productinfo'>Price: </h6><h6>{price}</h6>
     <h6 className='productinfo'>Description: </h6><h6>{description}</h6> 
-   <h6 className='productinfo'>Add to cart : <Button variant="secondary" size="sm" active> <FaShoppingBasket /> </Button></h6> 
+   <h6 className='productinfo'>Add to cart : <Button variant="secondary" size="sm" active onClick={() => addToCart()}> <FaShoppingBasket /> </Button></h6>
     </Card.Text>
   </Card.Body>
   </Card>

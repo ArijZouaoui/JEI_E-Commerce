@@ -32,16 +32,14 @@ function CartList({ products ,removeFromCart}) {
                                 </div>
                                 <div className="col-4 col-sm-4 col-md-4">
                                     <div className="quantity">
-                                        <input type="button" value="+" className="plus" />
                                         <input   value={product.quantity}
                                                className="qty"
-                                               size="4" readOnly={product.quantity}/>
-                                        <input type="button" value="-" className="minus"/>
+                                               size="4" />
                                     </div>
                                 </div>
                                 <div className="col-2 col-sm-2 col-md-2 text-right">
                                     <button type="button" className="btn btn-outline-danger btn-xs"
-                                            onClick={() => removeFromCart(product.id)} >
+                                            onClick={(e) => removeFromCart(product.id,e)} >
                                         <i className="fa fa-trash" aria-hidden="true"/>
                                     </button>
                                 </div>
